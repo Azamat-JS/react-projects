@@ -1,23 +1,35 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.jsx'
-function App(){
-  const ninjaTurtles = [<h2>Leonardo</h2>, "Donatello", "Raphael", "Michelangelo"] 
-  return (
-    <main>
-    <h1>Ninja Turtles</h1>
-    <ul>
-      {ninjaTurtles.map((turtle, index) => {
-      return <li key={index}>{turtle}</li>
-      })}
-      </ul>
-    </main>
-  )
-}
+import './index.css'
+import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
 )
+
+
+
+
+
+// import likes from './doc.js'
+// import Like from './assets/like.jsx'
+// function App(){
+//  const likesElement = likes.map((like) => {
+//    return <Like setup={like.setup} punchline={like.punchline} />
+//  })
+//   return (
+//     <main>
+//    {likesElement}
+//     </main>
+//   )
+// }
+
+
+
+
+
+
+
+
