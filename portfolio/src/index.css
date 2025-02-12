@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+header{
+  display: flex;
+  background-color: rgb(82, 80, 80);
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 5px 5px white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header > h1{
+  margin-left: 500px;
+}
+
+header > img{
+ font-size: 1rem;
+ width: 60px;
+ margin-right: 7px;
+ border-radius: 50%;
+ margin-left: 10px;
+}
+
+.portfolio-entry{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-container{
+  width: 290px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+ margin: 50px 30px;
+ align-items: center;
+
+}
+
+
+
+
+.main-image{
+  height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.entry-desc{
+ font-size: 1.5rem;
+}

@@ -2,7 +2,7 @@ export default function Header(){
     return (
         <header>
         <img src="../images/nodelogo.png" alt="nodejsLogo" />
-        <p>this is my portfolio</p>
+        <h1>This is my portfolio</h1>
         </header>
     )
 }

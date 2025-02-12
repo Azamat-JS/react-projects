@@ -1,0 +1,31 @@
+import Entry from '../components/entry'
+import Header from '../components/header'
+import data from './docs'
+import './App.css'
+
+function App() {
+
+const entryElements = data.map((entry) => {
+  return (
+    <Entry
+    key= {entry.id}
+    img = {entry.img}
+    title = {entry.title}
+    date = {entry.date}
+    desc = {entry.desc}
+    link = {entry.link}
+    />
+  )
+})
+
+  return (
+    <>
+    <Header/>
+    <main className='container'>
+      {entryElements}
+    </main>
+    </>
+  )
+}
+
+export default App
