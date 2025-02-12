@@ -13,22 +13,6 @@ createRoot(document.getElementById('root')).render(
 
 
 
-// import likes from './doc.js'
-// import Like from './assets/like.jsx'
-// function App(){
-//  const likesElement = likes.map((like) => {
-//    return <Like setup={like.setup} punchline={like.punchline} />
-//  })
-//   return (
-//     <main>
-//    {likesElement}
-//     </main>
-//   )
-// }
-
-
-
-
 
 
 
