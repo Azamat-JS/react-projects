@@ -1,8 +1,10 @@
+import chef_img from "../src/assets/shef.png"
+
 export default function Header(){
     return (
       <header>
-      <img src="../" alt="shef-photo" />
-      <h1>Chef Claude</h1>
+      <img src={chef_img} className="chefoto" alt="shef-photo" />
+      <h1 className="namecafe">Chef Claude</h1>
       </header>
     )
   }
