@@ -1,5 +1,6 @@
 import Entry from '../components/entry'
 import Header from '../components/header'
+import Bio from '../components/bio'
 import data from './docs'
 import './App.css'
 
@@ -21,6 +22,7 @@ const entryElements = data.map((entry) => {
   return (
     <>
     <Header/>
+     <Bio/>
     <main className='container'>
       {entryElements}
     </main>
