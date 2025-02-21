@@ -67,3 +67,9 @@ main{
     margin-left: 5px;
     margin-right: 2px;
 }
+
+.ingredient-list{
+    color: rgb(53, 53, 53);
+    margin-top: 60px;
+    margin-left: 80px;
+}

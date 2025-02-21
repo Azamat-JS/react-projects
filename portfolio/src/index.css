@@ -24,7 +24,7 @@ header{
 }
 
 header > h1{
-  margin-left: 920px;
+  margin-left: 1000px;
 }
 
 header > img{
@@ -88,4 +88,24 @@ object-fit: cover;
 
 .entry-desc{
  font-size: 1.5rem;
+}
+
+.card{
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.contact{
+  font-size: 25px;
+}
+
+.full-name{
+  font-size: 30px;
+}
+
+
+.card > h1 {
+  font-size: 55px;
 }

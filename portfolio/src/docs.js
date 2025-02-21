@@ -1,4 +1,3 @@
-import JS_icon from '../images/JS-icon.png'
 import library_jpg from '../images/library.jpeg'
 import school_jpg from '../images/school.jpg'
 import cars_jpg from '../images/cars.avif'
