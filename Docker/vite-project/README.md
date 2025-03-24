@@ -52,13 +52,3 @@ export default tseslint.config({
   },
 })
 ```
-
-```
-used commands of docker 
-
-// sudo docker build -t react-docker .  //to create an image
-
-// sudo docker run -p 5173:5173 react-docker  // to run the app
-
-// sudo docker run -p 5173:5173 -v "$(pwd):app" -v /app/node_modules react-docker  // to build volume that keep track all updates in the app and render them in browser
-
