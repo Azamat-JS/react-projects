@@ -1,21 +1,18 @@
-import React, { useState } from 'react'
-import Search from "./components/Search"
-import hero_img from './assets/hero_img.jpg'
+import React, { useEffect, useState } from 'react'
+import Card from './components/Card';
+import Button from './components/Button';
+import img1 from './assets/hero.png'
+import img2 from './assets/hero_img.jpg'
 
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+
   return (
     <main>
-      <div className='pattern'/>
-      <div className='wrapper'>
-        <header>
-          <img src={hero_img} alt="hero-img" />
-        <h1>Find <span className='text-gradient'>Clothes</span> You'll like without Hassle</h1>
-        </header>
-        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-        <h2 className='text-white'>{searchTerm}</h2>
-      </div>
+      <Card img={img1} title='Azamat Developer' text="Node.js web developer for more than 6 months"/>
+      <Card img={img2} title='Davron Designer' text="Figma designer for more than 6 months"/>
+      <Card img={img1} title='Odil SMM' text="SMM manager in X company for more than 10 months"/>
+      <Button/>
     </main>
   )
 }

@@ -13,3 +13,5 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 ## API for products: https://fakestoreapi.com/products
+## Course figma: https://jsmastery.com/video-kit/dd0f1153-ba7f-44c9-a450-0acdb954902b
+## and APIs: https://github.com/public-apis/public-apis
