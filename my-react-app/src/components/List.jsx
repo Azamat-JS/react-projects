@@ -1,8 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const List = (props) => {
-  const itemList = props.items;
-  const category = props.category;
+const List = ({items = [], category = 'Category'}) => {
 
   // fruits.sort((a, b) => a.name.localeCompare(b.name)) // Alphabetical
   // fruits.sort((a, b) => b.name.localeCompare(a.name)) // Reverse Alphabetical
@@ -12,7 +11,7 @@ const List = (props) => {
   // const lowCalFruits = fruits.filter(fruit => fruit.calories < 90)
   // const highCalFruits = fruits.filter(fruit => fruit.calories >= 90)
 
-  const listItems = itemList.map(item => <li key={item.id}>
+  const listItems = items.map(item => <li key={item.id}>
                              {item.name}: &nbsp;
                             <b>{item.calories}</b></li>);
   return (
@@ -22,5 +21,8 @@ const List = (props) => {
     </>
   )
 }
-
+List.propTypes = {
+  items: PropTypes.array,
+  category: PropTypes.string,
+};
 export default List
