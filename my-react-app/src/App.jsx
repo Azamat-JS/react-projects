@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import ProfilePicture from './components/ProfilePicture'
+import Counter from './components/Counter'
 
 const App = () => {
 
   return (
     <>
-    <ProfilePicture/>
+    <Counter/>
     </>
   )
 }
