@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Counter from './components/Counter'
+import OnChange from './components/OnChange'
+
 
 const App = () => {
 
   return (
     <>
-    <Counter/>
+    <OnChange/>
     </>
   )
 }
