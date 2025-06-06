@@ -6,7 +6,7 @@ const OnChange = () => {
     const [quantity, setQuantity] = useState(1);
     const [comment, setComment] = useState("");
     const [payment, setPayment] = useState("");
-    const [shipping, setShipping] = useState("")
+    const [shipping, setShipping] = useState("delivery")
 
     function handleNameChange(event){
         setName(event.target.value);
@@ -51,7 +51,7 @@ const OnChange = () => {
         <label>
             <input type="radio" value="pick up"
                    checked={shipping === "pick up"}
-                    onchange={handleShippingChange}
+                    onChange={handleShippingChange}
                    />
             Pick Up
         </label>
@@ -59,7 +59,7 @@ const OnChange = () => {
         <label>
              <input type="radio" value="delivery"
                    checked={shipping === "delivery"}
-                    onchange={handleShippingChange}
+                    onChange={handleShippingChange}
                     />
             Delivery
         </label>

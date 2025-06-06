@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import OnChange from './components/OnChange'
+import Object from './components/Object'
 
 
 const App = () => {
 
   return (
     <>
-    <OnChange/>
+    <Object/>
     </>
   )
 }
