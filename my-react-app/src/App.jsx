@@ -1,11 +1,11 @@
-import ComponentA from './components/ComponentA'
+import UseRef from './components/UseRef'
 
 
 const App = () => {
 
   return (
     <>
-    <ComponentA/>
+    <UseRef/>
     </>
   )
 }
