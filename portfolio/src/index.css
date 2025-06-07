@@ -24,7 +24,7 @@ header{
 }
 
 header > h1{
-  margin-left: 1000px;
+  align-self: center;
 }
 
 header > img{

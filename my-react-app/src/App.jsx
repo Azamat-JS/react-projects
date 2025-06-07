@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import ToDoList from './components/ToDoList'
+import DigitalClock from './components/DigitalClock'
 
 
 const App = () => {
 
   return (
     <>
-    <ToDoList/>
+    <DigitalClock/>
     </>
   )
 }
