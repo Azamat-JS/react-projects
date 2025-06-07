@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import AddFormItem from './components/AddFormItem'
+import ToDoList from './components/ToDoList'
 
 
 const App = () => {
 
   return (
     <>
-    <AddFormItem/>
+    <ToDoList/>
     </>
   )
 }
