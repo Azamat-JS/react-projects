@@ -1,11 +1,11 @@
-import UseRef from './components/UseRef'
+import StopWatch from './components/StopWatch'
 
 
 const App = () => {
 
   return (
     <>
-    <UseRef/>
+    <StopWatch/>
     </>
   )
 }

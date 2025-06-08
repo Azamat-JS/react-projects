@@ -29,18 +29,18 @@ const UseRef = () => {
     }
   return (
     <>
+    <input ref={inputRef1}/>
     <button onClick={handleClick1}>
         Click me 1!
     </button><br/>
-    <input ref={inputRef1}/>
+    <input ref={inputRef2}/>
     <button onClick={handleClick2}>
         Click me 2!
     </button><br/>
-    <input ref={inputRef2}/>
+    <input ref={inputRef3}/>
     <button onClick={handleClick3}>
         Click me 3!
     </button><br/>
-    <input ref={inputRef3}/>
     </>
   )
 }
