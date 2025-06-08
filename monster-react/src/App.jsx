@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import Conditions from './components/Conditions'
 import './App.css'
 
 function App() {
@@ -9,9 +7,7 @@ function App() {
 
   return (
     <>
-    <Header />
-    <Main name="Azamat" age={29}/>
-    <Footer/>
+  <Conditions isValid={true}/>
     </>
   )
 }
