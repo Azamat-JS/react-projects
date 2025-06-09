@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import Conditions from './components/Conditions'
-import './App.css'
+import { useState } from 'react';
+import StyleCard from './components/StyleCard';
+import ProfileCard from './components/ProfileCard';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-  <Conditions isValid={true}/>
-    </>
+    <section>
+      <StyleCard />
+      <ProfileCard />
+    </section>
   )
 }
 
