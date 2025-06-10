@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import StyleCard from './components/StyleCard';
-import ProfileCard from './components/ProfileCard';
+import UserStatus from './components/UserStatus';
+import Greeting from './components/Greeting';
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <section>
-      <StyleCard />
-      <ProfileCard />
+      <Greeting timeOfDay="morning" />
     </section>
   )
 }
