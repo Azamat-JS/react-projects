@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import UserStatus from './components/UserStatus';
-import Greeting from './components/Greeting';
-
+import UseState from './components/UseState';
 
 function App() {
-
   return (
-    <section>
-      <Greeting timeOfDay="morning" />
-    </section>
+    <UseState />
   )
 }
 
