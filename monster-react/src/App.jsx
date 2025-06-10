@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import ExampleC from './components/ExampleC';
+import ShoppingList from './components/ShoppingList';
 
 function App() {
 
   return (
     <>
-      <ExampleC />
+      <ShoppingList />
     </>
   )
 }
