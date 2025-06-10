@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import ShoppingList from './components/ShoppingList';
+import CopyInput from './components/CopyInput';
 
 function App() {
 
   return (
     <>
-      <ShoppingList />
+      <CopyInput />
     </>
   )
 }

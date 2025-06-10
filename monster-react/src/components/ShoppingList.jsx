@@ -5,7 +5,7 @@ const ShoppingList = () => {
     const [name, setName] = useState('');
     const [quantity, setQuantity] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         e.preventDefault()
 
         if (!name || !quantity) return;
