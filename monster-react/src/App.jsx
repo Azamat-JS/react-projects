@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import UseState from './components/UseState';
+import ExampleC from './components/ExampleC';
 
 function App() {
+
   return (
-    <UseState />
+    <>
+      <ExampleC />
+    </>
   )
 }
 
