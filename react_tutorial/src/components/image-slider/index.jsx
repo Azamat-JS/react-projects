@@ -37,8 +37,6 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
         if (url !== '') fetchImages(url)
     }, [url]);
 
-    console.log(images)
-
     if (loading) {
         return <div>Loading data ! Please wait</div>
     }
@@ -46,6 +44,7 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     if (errorMsg !== null) {
         return <div>Error occured ! {errorMsg}</div>
     }
+    
     return (
         <div className='container'>
             <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left" />
@@ -77,5 +76,4 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     )
 
 }
-
 export default ImageSlider
