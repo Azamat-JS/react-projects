@@ -15,16 +15,16 @@ const MenuItem = ({item}) => {
     }
     console.log(displayCurrentChildren)
   return (
-    <li className="menu-item">
-        <div style={{display: 'flex', gap: '20px'}}>
+    <li>
+        <div className="menu-item">
         <p>{item.label}</p>
         {
             item && item.children && item.children.length ?
-            <span onClick={() => handleToggleChildren(item.label)}>
+            (<span onClick={() => handleToggleChildren(item.label)}>
                 {
                     displayCurrentChildren[item.label] ? <FaMinus /> : <FaPlus color="white"  size={25}/>
                 }
-            </span> : null
+            </span> ): null
         }
         </div>
 
