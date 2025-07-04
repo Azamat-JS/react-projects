@@ -15,7 +15,7 @@ const MenuItem = ({item}) => {
     }
     console.log(displayCurrentChildren)
   return (
-    <li>
+    <li className="menu-item">
         <div style={{display: 'flex', gap: '20px'}}>
         <p>{item.label}</p>
         {

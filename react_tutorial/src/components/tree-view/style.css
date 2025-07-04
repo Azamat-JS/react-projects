@@ -3,3 +3,10 @@
     width: 350px;
     background: rgb(0, 71, 110);
 }
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
