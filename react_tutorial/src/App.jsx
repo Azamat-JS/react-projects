@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Accordian from './components/accordian/Accordian'
-import TreeView from './components/tree-view'
-import { menus } from './components/tree-view/data'
-import LoadMoreData from './components/load-more-data'
-import QRCodeGenerator from './components/qr-code'
-import LightDarkMode from './components/dark-theme'
-import ScrollIndicator from './components/scroll-indicator'
+import TreeView from './components/tree-view/tree'
+import { menus } from './components/tree-view/data-tree.js'
+import LoadMoreData from './components/load-more-data/load-data'
+import QRCodeGenerator from './components/qr-code/code'
+import LightDarkMode from './components/dark-theme/theme'
+import ScrollIndicator from './components/scroll-indicator/scroll'
 import TabTest from './components/custom-tabs/tab-test'
+import ModalTest from './components/custom-modal/modal-test'
 function App() {
 
   return (
@@ -29,7 +30,9 @@ function App() {
 
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
 
-      <TabTest />
+      {/* <TabTest /> */}
+
+      <ModalTest />
       
         </>
   )
