@@ -5,6 +5,7 @@ import { menus } from './components/tree-view/data'
 import LoadMoreData from './components/load-more-data'
 import QRCodeGenerator from './components/qr-code'
 import LightDarkMode from './components/dark-theme'
+import ScrollIndicator from './components/scroll-indicator'
 
 function App() {
 
@@ -24,7 +25,9 @@ function App() {
 
       {/* <QRCodeGenerator /> */}
 
-      <LightDarkMode />
+      {/* <LightDarkMode /> */}
+
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
       
         </>
   )

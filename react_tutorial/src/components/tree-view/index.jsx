@@ -1,5 +1,5 @@
 import MenuList from './menu-list'
-import './style.css'
+import './tree.css'
 
 const TreeView = ({menus = []}) => {
   return (

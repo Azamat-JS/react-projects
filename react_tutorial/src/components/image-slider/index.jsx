@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
-import './style.css'
+import './slider.css'
 
 const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     const [images, setImages] = useState([]);

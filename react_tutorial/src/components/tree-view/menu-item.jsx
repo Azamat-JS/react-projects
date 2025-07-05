@@ -1,7 +1,7 @@
 import { useState } from "react"
 import MenuList from "./menu-list"
 import {FaMinus, FaPlus} from 'react-icons/fa'
-import './style.css'
+import './tree.css'
 
 
 const MenuItem = ({item}) => {

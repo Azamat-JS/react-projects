@@ -1,5 +1,5 @@
 import MenuItem from './menu-item'
-import './style.css'
+import './tree.css'
 
 const MenuList = ({list = []}) => {
   return (
