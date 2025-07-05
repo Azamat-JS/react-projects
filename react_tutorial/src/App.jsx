@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Accordian from './components/accordian/Accordian'
-import './App.css'
 import TreeView from './components/tree-view'
 import { menus } from './components/tree-view/data'
 import LoadMoreData from './components/load-more-data'
@@ -8,7 +7,6 @@ import QRCodeGenerator from './components/qr-code'
 import LightDarkMode from './components/dark-theme'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

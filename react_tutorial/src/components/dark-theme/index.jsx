@@ -1,5 +1,5 @@
-import React from 'react'
-import LocalStorage from './useLocalStorage'
+import LocalStorage from './useLocalStorage';
+import './theme.css'
 
 const LightDarkMode = () => {
     const [theme, setTheme] = LocalStorage('theme', 'dark');
@@ -9,7 +9,7 @@ const LightDarkMode = () => {
     }
     console.log(theme)
   return (
-    <div className='light-dark-mode'>
+    <div className='light-dark-mode' data-theme={theme}>
         <div className='container'>
         <p>Dark & Light Theme</p>
         <button onClick={handleToggleTheme}>Change Theme</button>
