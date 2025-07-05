@@ -6,7 +6,7 @@ import LoadMoreData from './components/load-more-data'
 import QRCodeGenerator from './components/qr-code'
 import LightDarkMode from './components/dark-theme'
 import ScrollIndicator from './components/scroll-indicator'
-
+import TabTest from './components/custom-tabs/tab-test'
 function App() {
 
   return (
@@ -27,7 +27,9 @@ function App() {
 
       {/* <LightDarkMode /> */}
 
-      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
+      {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
+
+      <TabTest />
       
         </>
   )
