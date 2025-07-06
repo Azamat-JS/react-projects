@@ -1,5 +1,9 @@
 # React + Vite
 
+# APIs used in this tutorial:
+# 1. 'https://dummyjson.com/products?limit=100'
+# 2. 'https://dummyjson.com/users'
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
