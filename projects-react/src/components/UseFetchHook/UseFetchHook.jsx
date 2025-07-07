@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const UseFetchHook = ({ url, options = {} }) => {
+const useFetch = ( url, options = {} ) => {
   const [data, setData] = useState(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
 
   async function fetchData() {
+    setPending(true);
     try {
-      setPending(true);
       const response = await fetch(url, { ...options });
       if (!response.ok) throw new Error(response.statusText);
 
@@ -28,4 +28,4 @@ const UseFetchHook = ({ url, options = {} }) => {
   return { data, error, pending };
 };
 
-export default UseFetchHook;
+export default useFetch;

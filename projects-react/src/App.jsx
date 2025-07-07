@@ -5,6 +5,7 @@ import FeatureFlags from "./components/feature-flag/Flag"
 import Github from "./components/github/Github"
 import Autocomplete from "./components/search-autocomplete/Autocomplete"
 import TicTac from "./components/TicTac/TicTac"
+import TestClick from "./components/use-outside-click/TestClick"
 import TestFetch from "./components/UseFetchHook/TestFetch"
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <FeatureFlags />
     </FeatureFlagsGlobalState> */}
 
-    <TestFetch />
+      <TestClick/>
         </>
   )
 }
