@@ -3,6 +3,7 @@ import TabTest from "./components/custom-tabs/tab-test"
 import FeatureFlagsGlobalState from "./components/feature-flag/Context/Context"
 import FeatureFlags from "./components/feature-flag/Flag"
 import Github from "./components/github/Github"
+import ScrollTopAndBottom from "./components/scrollingTopandBottom/ScrollTop"
 import Autocomplete from "./components/search-autocomplete/Autocomplete"
 import TicTac from "./components/TicTac/TicTac"
 import TestClick from "./components/use-outside-click/TestClick"
@@ -17,7 +18,7 @@ function App() {
       <FeatureFlags />
     </FeatureFlagsGlobalState> */}
 
-      <WindowTest/>
+      <ScrollTopAndBottom/>
         </>
   )
 }
