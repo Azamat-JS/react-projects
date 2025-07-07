@@ -4,6 +4,7 @@ import useClick from './UseClick';
 const TestClick = () => {
   const [showContent, setShowContent] = useState(false);
   const ref = useRef();
+  console.log(ref)
 
   useClick(ref, () => setShowContent(false));
 

@@ -7,6 +7,7 @@ import Autocomplete from "./components/search-autocomplete/Autocomplete"
 import TicTac from "./components/TicTac/TicTac"
 import TestClick from "./components/use-outside-click/TestClick"
 import TestFetch from "./components/UseFetchHook/TestFetch"
+import WindowTest from "./components/WindowResize/WindowTest"
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       <FeatureFlags />
     </FeatureFlagsGlobalState> */}
 
-      <TestClick/>
+      <WindowTest/>
         </>
   )
 }
