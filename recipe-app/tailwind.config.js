@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         opensans: ['"Open Sans"', 'sans-serif'],
         roboto: ['"Roboto"', 'sans-serif'],
+        lobster: ['"Lobster"', 'sans-serif']
       }
     },
   },
