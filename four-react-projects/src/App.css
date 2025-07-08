@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+
+.search-engine {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 30px;
+  margin-top: 10px;
+}
+
+.App {
+  text-align: center;
+  margin: 50px auto 0px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  height: 470px;
+  padding: 20px 15px;
+  background: linear-gradient(33deg, rgba(89, 74, 10, 1.000) 0.000%, rgba(89, 74, 10, 1.000) 14.286%, rgba(159, 92, 13, 1.000) 14.286%, rgba(159, 92, 13, 1.000) 28.571%, rgba(227, 118, 18, 1.000) 28.571%, rgba(227, 118, 18, 1.000) 42.857%, rgba(255, 150, 24, 1.000) 42.857%, rgba(255, 150, 24, 1.000) 57.143%, rgba(255, 188, 31, 1.000) 57.143%, rgba(255, 188, 31, 1.000) 71.429%, rgba(255, 230, 39, 1.000) 71.429%, rgba(255, 230, 39, 1.000) 85.714%, rgba(255, 255, 47, 1.000) 85.714% 100.000%);
+  box-shadow: 2px 2px 6px 2px gold;
+  transition: all 0.5s;
+  font-family: sans-serif;
+}
+
+.App:hover {
+  margin: 46px auto 0px;
+  box-shadow: 3px 3px 10px 4px gold;  
+}
+
+.search-engine input {
+  width: 70%;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 2px 16px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  color: #555;
+}
+
+.search-engine button {
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  padding: 13px 15px;
+}
+
+.city-name {
+  margin-bottom: 10px;
+
+}
+
+.loading {
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.temperature {
+  font-size: 64px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.weather-desc {
+  color: black;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  line-height: 3px;
+}
