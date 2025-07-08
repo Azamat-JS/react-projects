@@ -6,6 +6,7 @@ export default function GlobalState({ children }) {
   const [searchParam, setSearchParam] = useState("");
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
+  const [recipeDetails, setRecipeDetails] = useState(null);
 
   async function handleSubmit(event) {
     event?.preventDefault();
@@ -14,7 +15,6 @@ export default function GlobalState({ children }) {
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchParam}`
       );
       const data = await res.json();
-      
 
       if (data.meals) {
         setRecipeList(data.meals);
@@ -32,7 +32,7 @@ export default function GlobalState({ children }) {
   console.log(loading, recipeList);
   return (
     <GlobalContext.Provider
-      value={{ searchParam, setSearchParam, handleSubmit, loading, recipeList }}
+      value={{ searchParam, setSearchParam, handleSubmit, loading, recipeList, recipeDetails, setRecipeDetails }}
     >
       {children}
     </GlobalContext.Provider>
