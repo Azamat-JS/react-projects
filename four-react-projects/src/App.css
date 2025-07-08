@@ -56,6 +56,18 @@ body {
   padding: 13px 15px;
 }
 
+.search-engine button:hover {
+  background: gold;
+  color: black;
+  font-size: 15;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.search-engine button:active {
+  background: yellow;
+}
+
 .city-name {
   margin-bottom: 10px;
 
