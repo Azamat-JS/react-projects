@@ -47,7 +47,6 @@ export default function GlobalState({ children }) {
     setFavouritesList(cpyFavouritesList)
   }
 
-  console.log(favouritesList, 'favouriteList');
   return (
     <GlobalContext.Provider
       value={{

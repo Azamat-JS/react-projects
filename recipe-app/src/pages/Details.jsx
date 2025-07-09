@@ -17,7 +17,6 @@ const Details = () => {
         `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
       );
       const data = await response.json();
-      console.log(data.meals[0].idMeal);
       if (data.meals && data.meals.length > 0) {
         setRecipeDetails(data.meals[0]);
       }
