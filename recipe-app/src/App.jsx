@@ -9,8 +9,6 @@ import Favourites from "./pages/Favourites";
 import Details from "./pages/Details";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <div className="min-h-screen p-6 bg-white text-gray-600 text-lg">

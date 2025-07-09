@@ -19,7 +19,7 @@ const RecipeItem = ({ item }) => {
         </h3>
         <Link
           to={`/details/${item.idMeal}`}
-          className="text-sm p-2 px-5 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black hover:bg-gray-400 hover:text-black hover:font-semibold text-white"
+          className="text-sm p-2 px-5 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black active:bg-white hover:bg-gray-600 active:text-black text-white"
         >
           Recipe Details
         </Link>
