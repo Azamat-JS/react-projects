@@ -1,14 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Cart from './pages/Cart'
+import Header from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className='text-blue-700 font-semibold'>Tailwind test</h1>
+    <Header />
+     <Routes>
+      <Route exact path='/' element={<Home />}/>
+      <Route path='/cart' element={<Cart />}/>
+     </Routes>
     </>
   )
 }
