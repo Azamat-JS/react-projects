@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "./Context";
+import {FaSearch} from 'react-icons/fa'
 
 const Navbar = () => {
     const {searchParam, setSearchParam, handleSubmit} = useContext(GlobalContext)
@@ -11,14 +12,16 @@ const Navbar = () => {
         <NavLink to={"/"}>Food Recipe</NavLink>
       </li>
       </h2>
-      <form onSubmit={handleSubmit}>
+      
+<form onSubmit={handleSubmit} className="relative lg:w-96">
+  <FaSearch onClick={handleSubmit} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
         <input
           type="text"
           name="search"
           value={searchParam}
           onChange={(event) => setSearchParam(event.target.value)}
           placeholder="Enter Ingredient Name..."
-          className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200"
+          className="bg-white/75 p-3 px-8 rounded-full outline-none w-full shadow-lg shadow-red-100 focus:shadow-red-200"
         />
       </form>
       <ul className="flex gap-5">
