@@ -1,6 +1,22 @@
-import {useState} from 'react'
+import { useContext } from "react";
+import { GlobalContext } from "../Context";
 
-const Transaction = ({isOpen, setIsOpen}) => {
+const Transaction = ({ isOpen, setIsOpen }) => {
+  const { formData, setFormData, handleFormSubmit } =
+    useContext(GlobalContext);
+
+  function handleFormChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    handleFormSubmit(formData);
+    setIsOpen(false); 
+  }
 
   return (
     <>
@@ -18,57 +34,74 @@ const Transaction = ({isOpen, setIsOpen}) => {
             <h2 className="text-xl font-semibold mb-4">Add New Transaction</h2>
 
             {/* Modal Body */}
-            <form>
+            <form onSubmit={handleSubmit}>
               {/* form fields go here */}
-              <label htmlFor='description'>Enter description</label>
+              <label htmlFor="description">Enter description</label>
               <input
                 type="text"
-                name='description'
+                onChange={handleFormChange}
+                name="description"
                 placeholder="Enter Transaction description"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
               />
-              <label htmlFor='amount'>Enter Amount</label>
+              <label htmlFor="amount">Enter Amount</label>
               <input
                 type="number"
-                name='amount'
+                onChange={handleFormChange}
+                name="amount"
                 placeholder="Enter Transaction amount"
                 className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
               />
-              <div className='flex gap-3 justify-center mb-5 mt-2'>
+
+              {/* Radio buttons */}
+              <div className="flex gap-3 justify-center mb-5 mt-2">
                 <div>
-              <input type="radio" name='radio' />
-              <label htmlFor="radio-expense">Expense</label>
+                  <input
+                    type="radio"
+                    checked={formData.type === "income"}
+                    value="income"
+                    name="type"
+                    onChange={handleFormChange}
+                  />
+
+                  <label>Income</label>
                 </div>
                 <div>
-              <input type="radio" name='radio' />
-              <label htmlFor="radio-input">Income</label>
+                  <input
+                    type="radio"
+                    checked={formData.type === "expense"}
+                    value="expense"
+                    name="type"
+                    onChange={handleFormChange}
+                  />
+
+                  <label>Expense</label>
                 </div>
               </div>
 
-            <div className='flex justify-around'>
-
-              <button 
-                type="submit"
-                className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded"
-              >
-                Cancel
-              </button>
-
-              <button 
-                type="submit"
-                className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded"
+              <div className="flex justify-around">
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded"
                 >
-                Submit
-              </button>
-            </div>
+                  Cancel
+                </button>
 
+                <button
+                  type="submit"
+                  className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded"
+                >
+                  Submit
+                </button>
+              </div>
             </form>
 
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute text-4xl top-2 right-3 text-gray-400 hover:text-gray-600"
-              >
+            >
               &times;
             </button>
           </div>
@@ -76,6 +109,6 @@ const Transaction = ({isOpen, setIsOpen}) => {
       )}
     </>
   );
-}
+};
 
-export default Transaction
+export default Transaction;

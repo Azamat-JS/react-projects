@@ -4,7 +4,7 @@ const options = {
     labels:['Income', 'Expense'],
     colors: ['#213ebf', '#FD5E53'],
     chart: {
-        width: '50px'
+        width: '910px'
     },
     states:{
         hover: {
@@ -15,7 +15,7 @@ const options = {
     },
 
     legend: {
-        show: false,
+        show: true,
     },
     datalabels: {
         enabled: false,

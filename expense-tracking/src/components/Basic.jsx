@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Summary from "./Summary";
 import View from "./View";
+import { GlobalContext } from "../Context";
 
 
 const Basic = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const { totalExpense, setTotalExpense,
+    totalIncome, setTotalIncome, allTransactions} = useContext(GlobalContext)
 
-  function handleIsOpen(){
+  function handleIsOpen() {
     return setIsOpen((prev) => !prev)
   }
+
+  useEffect(() => {
+    let income = 0;
+    let expense = 0;
+
+    allTransactions.forEach((item) => {
+      item.type === 'income' 
+      ? (income = income + parseFloat(item.amount))
+      : (expense = expense + parseFloat(item.amount))
+    });
+
+  setTotalExpense(expense);
+  setTotalIncome(income);
+  },[allTransactions])
   return (
     <div className="flex flex-col text-center px-5">
       <div className="flex mt-12 justify-between items-center">
@@ -21,10 +38,10 @@ const Basic = () => {
           </button>
         </div>
       </div>
-      <Summary isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Summary totalExpense={totalExpense} totalIncome={totalIncome} isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="flex flex-col lg:flex-row w-full items-start justify-evenly">
-        <View/>
-        <View/>
+        <View data={allTransactions.filter((item) => item.type === 'expense')} type={'expense'}/>
+        <View data={allTransactions.filter((item) => item.type === 'income')} type={'income'}/>
       </div>
     </div>
   )
