@@ -26,7 +26,7 @@ const Products = ({ product }) => {
           liked ? "text-red-500" : "text-black"
         }`}
       />
-      <div className="group flex flex-col items-center border-2 border-red-900 gap-3 p-4 mt-10 ml-5 rounded-xl">
+      <div className="group flex flex-col shadow-xl hover:shadow-md items-center gap-3 p-4 mt-10 ml-5 rounded-xl">
         <div className="h-[180px]">
           <img
             src={product?.image}
