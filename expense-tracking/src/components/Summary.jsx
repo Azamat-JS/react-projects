@@ -1,6 +1,8 @@
 import React from 'react'
+import Transaction from './Transaction'
+import TransactionChart from './Chart'
 
-const Summary = () => {
+const Summary = ({isOpen, setIsOpen}) => {
   return (
     <div className='flex p-6 border border-gray-100 overflow-hidden rounded-md bg-white'>
         <div className='flex flex-col lg:flex-row w-full justify-center items-center'>
@@ -22,9 +24,12 @@ const Summary = () => {
                 </div>
             </div>
             <div className='flex flex-1 mt-10 ml-[-90px] mr-5 w-[300px] h-[300px] items-center justify-center'>
-                <header className='font-bold text-4xl'>Chart</header>
+                <header className='font-bold text-4xl'>
+                    <TransactionChart expense={100} income={1000}/>
+                </header>
             </div>
         </div>
+        <Transaction isOpen={isOpen} setIsOpen={setIsOpen}/>
     </div>
   )
 }
