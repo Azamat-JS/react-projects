@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Summary from "./Summary";
 import View from "./View";
 import { GlobalContext } from "../Context";
+import Footer from "./Footer";
 
 
 const Basic = () => {
@@ -43,6 +44,7 @@ const Basic = () => {
         <View data={allTransactions.filter((item) => item.type === 'expense')} type={'expense'}/>
         <View data={allTransactions.filter((item) => item.type === 'income')} type={'income'}/>
       </div>
+      <Footer />
     </div>
   )
 };
