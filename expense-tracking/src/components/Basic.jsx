@@ -16,7 +16,7 @@ const Basic = () => {
         </div>
       </div>
       <Summary />
-      <div className="flex ">
+      <div className="flex flex-col lg:flex-row w-full items-start justify-evenly">
         <View/>
         <View/>
       </div>
