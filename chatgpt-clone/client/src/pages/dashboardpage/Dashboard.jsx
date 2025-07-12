@@ -3,9 +3,11 @@ import './Dashboard.css'
 
 const Dashboard = () => {
   const {userId} = useAuth()
+  const { getToken } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const token = await getToken();
     const text = e.target.text.value;
     if(!text) return;
 
@@ -13,9 +15,10 @@ const Dashboard = () => {
       method: "POST",
       credentials: "include",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
-      body:JSON.stringify({userId, text})
+      body:JSON.stringify({ text})
     })
   }
 

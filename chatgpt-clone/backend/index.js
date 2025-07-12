@@ -4,12 +4,16 @@ const cors = require('cors')
 const ImageKit = require("imagekit");
 const mongoose = require('mongoose');
 const Chat = require('./models/chat')
-const UserChats = require('./models/userChats')
+const UserChats = require('./models/userChats');
+const { ClerkExpressRequireAuth } = require('@clerk/clerk-sdk-node');
 
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    credentials:true,
+    origin: "http://localhost:5173"
+}));
 
 app.use(express.json())
 
@@ -33,8 +37,15 @@ app.get('/api/upload', (req, res) => {
     res.send(result);
 })
 
-app.post('/api/chats', async (req, res) => {
-  const {userId, text} = req.body;
+// app.get('/api/test', ClerkExpressRequireAuth(), (req, res)=> {
+//     res.send('Success!')
+//     const { userId } = req.auth;
+//     console.log(userId)
+// })
+
+app.post('/api/chats', ClerkExpressRequireAuth(), async (req, res) => {
+  const { text} = req.body;
+  const { userId } = req.auth;
 
   try {
     // Create a new Chat
@@ -58,7 +69,7 @@ app.post('/api/chats', async (req, res) => {
                     title: text.substring(0, 20)
                 }
             ]
-        });
+        })
         await newUserChats.save()
     }else{
         // IF EXISTS, PUSH THE CHAT TO THE EXISTING ARRAY
@@ -81,7 +92,34 @@ app.post('/api/chats', async (req, res) => {
   }
 })
 
+app.get("/api/userchats", ClerkExpressRequireAuth(), async (req, res) => {
+    const userId = req.auth.userId;
 
+    try {
+        const foundUser = await UserChats.find({userId})
+        res.status(200).send(foundUser[0].chats)
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Error fetching users')
+    }
+})
+
+app.get("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
+    const userId = req.auth.userId;
+
+    try {
+        const chat = await Chat.findOne({_id: req.params.id, userId})
+        res.status(200).send(chat)
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Error fetching chat')
+    }
+})
+
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(401).send('Unauthenticated!')
+})
 
 app.listen(port, () => {
     connect()

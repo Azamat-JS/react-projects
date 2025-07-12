@@ -2,9 +2,26 @@ import { useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
+import { useAuth } from "@clerk/clerk-react";
 
 const Home = () => {
-  const [typingStatus, setTypingStatus] = useState("AI-bot");
+  const [typingStatus, setTypingStatus] = useState("AI-agent");
+
+// const { getToken } = useAuth();
+
+// const test = async () => {
+//   const token = await getToken();
+//   const response = await fetch("http://localhost:4000/api/test", {
+//     method: "GET",
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//   });
+
+//   const data = await response.text();
+//   console.log(data); // should log: "Success!"
+// };
+
   return (
     <div className="homepage">
       <img src="/orbital.png" className="orbital" />
@@ -39,17 +56,17 @@ const Home = () => {
                 "How can I help you?",
                 2000,
                 () => {
-                  setTypingStatus("Human");
+                  setTypingStatus("AI-agent");
                 },
                 "Tell me about AI.",
                 2000,
                 () => {
-                  setTypingStatus("AI-agent");
+                  setTypingStatus("Human");
                 },
                 "AI is a powerful tool to carried out innovative ideas",
                 2000,
                 () => {
-                  setTypingStatus("Human");
+                  setTypingStatus("AI-agent");
                 },
                 "Wow, that`s amazing to use it!",
                 2000,
