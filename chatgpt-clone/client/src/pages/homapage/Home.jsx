@@ -27,9 +27,7 @@ const Home = () => {
           <div className="chat">
             <img
               src={
-                typingStatus === "Human1"
-                  ? "/human1.avif"
-                  : typingStatus === "Human2"
+                typingStatus === "Human"
                   ? "/human2.avif"
                   : "/bot.webp"
               }
@@ -41,22 +39,22 @@ const Home = () => {
                 "How can I help you?",
                 2000,
                 () => {
-                  setTypingStatus("AI-agent");
+                  setTypingStatus("Human");
                 },
                 "Tell me about AI.",
                 2000,
                 () => {
-                  setTypingStatus("Human1");
+                  setTypingStatus("AI-agent");
                 },
                 "AI is a powerful tool to carried out innovative ideas",
                 2000,
                 () => {
-                  setTypingStatus("AI-agent");
+                  setTypingStatus("Human");
                 },
-                "Wow, that`s amazing to use it",
+                "Wow, that`s amazing to use it!",
                 2000,
                 () => {
-                  setTypingStatus("Human2");
+                  setTypingStatus("Human");
                 },
               ]}
               wrapper="span"

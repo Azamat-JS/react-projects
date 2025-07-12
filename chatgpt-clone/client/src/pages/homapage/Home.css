@@ -134,6 +134,7 @@
     left: 0;
     opacity: 0.08;
     animation: 12s linear infinite alternate-reverse rotateOrbital;
+    z-index: -1;
 }
 
 .terms{
